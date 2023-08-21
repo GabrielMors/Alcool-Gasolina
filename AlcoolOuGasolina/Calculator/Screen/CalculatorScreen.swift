@@ -17,8 +17,47 @@ class CalculatorScreen: UIView {
         return image
     }()
     
+    lazy var logoAppImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "LOGO menor")
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
+    
+    lazy var ethanolPriceTextField: UITextField = {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.font = UIFont.systemFont(ofSize: 18)
+        textField.placeholder = "Preço do Álcool"
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        textField.keyboardType = .decimalPad
+        textField.autocorrectionType = .no
+        textField.spellCheckingType = .no
+        textField.textColor = .darkGray
+        return textField
+    }()
+    
+    lazy var gasPriceTextField: UITextField = {
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.font = UIFont.systemFont(ofSize: 18)
+        textField.placeholder = "Preço da Gasolina"
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        textField.keyboardType = .decimalPad
+        textField.autocorrectionType = .no
+        textField.spellCheckingType = .no
+        textField.textColor = .darkGray
+        return textField
+    }()
+    
     private func addSubViews() {
         addSubview(backgroundImageView)
+        addSubview(logoAppImageView)
+        addSubview(ethanolPriceTextField)
+        addSubview(gasPriceTextField)
     }
     
     override init(frame: CGRect) {
@@ -38,6 +77,21 @@ class CalculatorScreen: UIView {
             backgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
         
+            logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            
+            ethanolPriceTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 200),
+            ethanolPriceTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            ethanolPriceTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            ethanolPriceTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            gasPriceTextField.topAnchor.constraint(equalTo: ethanolPriceTextField.bottomAnchor, constant: 16),
+            gasPriceTextField.leadingAnchor.constraint(equalTo: ethanolPriceTextField.leadingAnchor),
+            gasPriceTextField.trailingAnchor.constraint(equalTo: ethanolPriceTextField.trailingAnchor),
+            gasPriceTextField.heightAnchor.constraint(equalTo: ethanolPriceTextField.heightAnchor),
+            
+            
         ])
     }
 }

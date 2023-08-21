@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		C407A8762A93A6BB00A5F7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8752A93A6BB00A5F7C6 /* AppDelegate.swift */; };
 		C407A8782A93A6BB00A5F7C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8772A93A6BB00A5F7C6 /* SceneDelegate.swift */; };
-		C407A87A2A93A6BB00A5F7C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8792A93A6BB00A5F7C6 /* ViewController.swift */; };
+		C407A87A2A93A6BB00A5F7C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8792A93A6BB00A5F7C6 /* HomeViewController.swift */; };
 		C407A87F2A93A6BE00A5F7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C407A87E2A93A6BE00A5F7C6 /* Assets.xcassets */; };
 		C407A8822A93A6BE00A5F7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C407A8802A93A6BE00A5F7C6 /* LaunchScreen.storyboard */; };
+		C407A88D2A93AF3400A5F7C6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A88C2A93AF3400A5F7C6 /* HomeScreen.swift */; };
+		C407A8902A93B79B00A5F7C6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A88F2A93B79B00A5F7C6 /* CalculatorViewController.swift */; };
+		C407A8932A93B80000A5F7C6 /* CalculatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8922A93B80000A5F7C6 /* CalculatorScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C407A8722A93A6BB00A5F7C6 /* AlcoolOuGasolina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlcoolOuGasolina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C407A8752A93A6BB00A5F7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C407A8772A93A6BB00A5F7C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C407A8792A93A6BB00A5F7C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C407A8792A93A6BB00A5F7C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C407A87E2A93A6BE00A5F7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C407A8812A93A6BE00A5F7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C407A8832A93A6BE00A5F7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C407A88C2A93AF3400A5F7C6 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C407A88F2A93B79B00A5F7C6 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		C407A8922A93B80000A5F7C6 /* CalculatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		C407A8742A93A6BB00A5F7C6 /* AlcoolOuGasolina */ = {
 			isa = PBXGroup;
 			children = (
-				C407A8752A93A6BB00A5F7C6 /* AppDelegate.swift */,
-				C407A8772A93A6BB00A5F7C6 /* SceneDelegate.swift */,
-				C407A8792A93A6BB00A5F7C6 /* ViewController.swift */,
-				C407A87E2A93A6BE00A5F7C6 /* Assets.xcassets */,
-				C407A8802A93A6BE00A5F7C6 /* LaunchScreen.storyboard */,
+				C407A88E2A93B78200A5F7C6 /* Calculator */,
+				C407A88A2A93AF1F00A5F7C6 /* Home */,
+				C407A8892A93AF0C00A5F7C6 /* Resource */,
 				C407A8832A93A6BE00A5F7C6 /* Info.plist */,
 			);
 			path = AlcoolOuGasolina;
+			sourceTree = "<group>";
+		};
+		C407A8892A93AF0C00A5F7C6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8752A93A6BB00A5F7C6 /* AppDelegate.swift */,
+				C407A8772A93A6BB00A5F7C6 /* SceneDelegate.swift */,
+				C407A87E2A93A6BE00A5F7C6 /* Assets.xcassets */,
+				C407A8802A93A6BE00A5F7C6 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C407A88A2A93AF1F00A5F7C6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C407A88B2A93AF2500A5F7C6 /* Screen */,
+				C407A8792A93A6BB00A5F7C6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C407A88B2A93AF2500A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A88C2A93AF3400A5F7C6 /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A88E2A93B78200A5F7C6 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8912A93B7EE00A5F7C6 /* Screen */,
+				C407A88F2A93B79B00A5F7C6 /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		C407A8912A93B7EE00A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8922A93B80000A5F7C6 /* CalculatorScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C407A87A2A93A6BB00A5F7C6 /* ViewController.swift in Sources */,
+				C407A8902A93B79B00A5F7C6 /* CalculatorViewController.swift in Sources */,
+				C407A88D2A93AF3400A5F7C6 /* HomeScreen.swift in Sources */,
+				C407A87A2A93A6BB00A5F7C6 /* HomeViewController.swift in Sources */,
 				C407A8762A93A6BB00A5F7C6 /* AppDelegate.swift in Sources */,
 				C407A8782A93A6BB00A5F7C6 /* SceneDelegate.swift in Sources */,
+				C407A8932A93B80000A5F7C6 /* CalculatorScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

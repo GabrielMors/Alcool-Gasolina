@@ -8,9 +8,10 @@
 import UIKit
 
 class CalculatorViewController: BaseViewController {
-
+    
     var screen: CalculatorScreen?
     var alert: Alert?
+    private var transitionAnimator: UIViewPropertyAnimator?
     
     override func loadView() {
         screen = CalculatorScreen()
@@ -22,7 +23,7 @@ class CalculatorViewController: BaseViewController {
         screen?.setDelegate(delegate: self)
         alert = Alert(controller: self)
     }
-
+    
     private func validateTextField() -> Bool {
         
         guard let ethanolPrice = screen?.ethanolPriceTextField.text else { return false }
@@ -45,30 +46,36 @@ class CalculatorViewController: BaseViewController {
 }
 
 extension CalculatorViewController: CalculatorScreenProtocol {
-
+    
     func tappedBackButton() {
-        navigationController?.popViewController(animated: true)
+        UIView.transition(with: self.view.window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.navigationController?.popViewController(animated: false)
+        }, completion: nil)
     }
     
     func tappedCalculateButton() {
-        
         if validateTextField() {
-
+            // Criar a próxima tela (ResultViewController)
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
-
+            
             let ethanolPrice: Double = (formatter.number(from: screen?.ethanolPriceTextField.text ?? "0.0") as? Double) ?? 0.0
             let gasPrice: Double = (formatter.number(from: screen?.gasPriceTextField.text ?? "0.0") as? Double) ?? 0.0
-
+            
             var viewController: ResultViewController?
             if ethanolPrice / gasPrice > 0.7 {
-                print("Melhor usar Gasolina!")
                 viewController = ResultViewController(bestFuel: .gas)
             } else {
-                print("Melhor usar Álcool!")
                 viewController = ResultViewController(bestFuel: .ethanol)
             }
-            navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+            
+            // Configurar a animação de transição de tela
+            UIView.transition(with: self.view.window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.navigationController?.pushViewController(viewController ?? UIViewController(), animated: false)
+            }, completion: nil)
         }
     }
+    
+    
+    
 }

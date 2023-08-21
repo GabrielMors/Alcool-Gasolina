@@ -36,19 +36,19 @@ class ResultViewController: UIViewController {
         screen?.setDelegate(delegate: self)
         screen?.resultLabel.text = bestFuel.rawValue
     }
-
-    func popViewController() {
-        navigationController?.popViewController(animated: true)
-    }
     
 }
 
 extension ResultViewController: ResultScreenProtocol {
     func tappedBackButton() {
-        popViewController()
+        UIView.transition(with: self.view.window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.navigationController?.popViewController(animated: false)
+        }, completion: nil)
     }
     
     func tappedCalculateButton() {
-        popViewController()
+        UIView.transition(with: self.view.window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.navigationController?.popViewController(animated: false)
+        }, completion: nil)
     }
 }

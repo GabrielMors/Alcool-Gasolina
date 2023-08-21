@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     var screen: HomeScreen?
     
     override func loadView() {
@@ -24,13 +24,17 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         screen?.setDelegate(delegate: self)
     }
-
-
+    
+    
 }
 
 extension HomeViewController: HomeScreenProtocol {
     func tappedStartButton() {
         let viewController = CalculatorViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        
+        // Configurar a animação de transição de tela
+        UIView.transition(with: self.view.window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.navigationController?.pushViewController(viewController, animated: false)
+        }, completion: nil)
     }
 }

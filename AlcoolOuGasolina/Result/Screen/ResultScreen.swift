@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol ResultScreenProtocol: AnyObject {
+    func tappedBackButton()
+    func tappedCalculateButton()
+}
+
 class ResultScreen: UIView {
+    
+    private weak var delegate: ResultScreenProtocol?
+    
+    public func setDelegate(delegate: ResultScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     lazy var backgroundImageView: UIImageView = {
         let image = UIImageView()
@@ -26,7 +37,7 @@ class ResultScreen: UIView {
     }()
     
     @objc private func tappedBackButton() {
-        
+        self.delegate?.tappedBackButton()
     }
     
     lazy var logoAppImageView: UIImageView = {
@@ -72,7 +83,7 @@ class ResultScreen: UIView {
     }()
     
     @objc private func tappedCalculateButton() {
-        
+        self.delegate?.tappedCalculateButton()
     }
     
     private func addSubViews() {

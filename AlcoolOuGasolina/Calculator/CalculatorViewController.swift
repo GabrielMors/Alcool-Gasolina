@@ -18,7 +18,18 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        screen?.setDelegate(delegate: self)
     }
 
+}
+
+extension CalculatorViewController: CalculatorScreenProtocol {
+
+    func tappedBackButton() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func tappedCalculateButton() {
+        print(#function)
+    }
 }

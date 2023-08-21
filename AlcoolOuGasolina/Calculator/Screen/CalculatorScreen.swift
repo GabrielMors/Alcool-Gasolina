@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol CalculatorScreenProtocol: AnyObject {
+    func tappedBackButton()
+    func tappedCalculateButton()
+}
+
 class CalculatorScreen: UIView {
+    
+    private weak var delegate: CalculatorScreenProtocol?
+    
+    public func setDelegate(delegate: CalculatorScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     lazy var backgroundImageView: UIImageView = {
         let image = UIImageView()
@@ -20,7 +31,7 @@ class CalculatorScreen: UIView {
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Botão Back", for: .normal)
+        button.setImage(UIImage(named: "Botão Back"), for: .normal)
 //        button.clipsToBounds = true
 //        button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
@@ -28,7 +39,7 @@ class CalculatorScreen: UIView {
     }()
     
     @objc private func tappedBackButton() {
-        
+        self.delegate?.tappedBackButton()
     }
     
     lazy var logoAppImageView: UIImageView = {
@@ -81,7 +92,7 @@ class CalculatorScreen: UIView {
     }()
     
     @objc private func tappedCalculateButton() {
-        
+        self.delegate?.tappedCalculateButton()
     }
     
     private func addSubViews() {

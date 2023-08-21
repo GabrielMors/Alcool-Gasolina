@@ -59,6 +59,7 @@ class CalculatorScreen: UIView {
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.textColor = .darkGray
+        textField.addDoneButtonOnKeyboard()
         return textField
     }()
     
@@ -73,6 +74,7 @@ class CalculatorScreen: UIView {
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.textColor = .darkGray
+        textField.addDoneButtonOnKeyboard()
         return textField
     }()
     

@@ -18,6 +18,8 @@
 		C407A8962A93D63400A5F7C6 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8952A93D63400A5F7C6 /* Alert.swift */; };
 		C407A89A2A93E05200A5F7C6 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8992A93E05200A5F7C6 /* ResultScreen.swift */; };
 		C407A89C2A93E06100A5F7C6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A89B2A93E06100A5F7C6 /* ResultViewController.swift */; };
+		C4D8A6212A940B1800B71F22 /* UItextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8A6202A940B1800B71F22 /* UItextField+Extension.swift */; };
+		C4D8A6232A940E2300B71F22 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8A6222A940E2300B71F22 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C407A8952A93D63400A5F7C6 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C407A8992A93E05200A5F7C6 /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 		C407A89B2A93E06100A5F7C6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		C4D8A6202A940B1800B71F22 /* UItextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UItextField+Extension.swift"; sourceTree = "<group>"; };
+		C4D8A6222A940E2300B71F22 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		C407A8742A93A6BB00A5F7C6 /* AlcoolOuGasolina */ = {
 			isa = PBXGroup;
 			children = (
+				C4D8A61F2A940AFD00B71F22 /* Extension */,
 				C407A8942A93D62A00A5F7C6 /* Alert */,
 				C407A8972A93E03B00A5F7C6 /* Result */,
 				C407A88E2A93B78200A5F7C6 /* Calculator */,
@@ -146,6 +151,15 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		C4D8A61F2A940AFD00B71F22 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8A6202A940B1800B71F22 /* UItextField+Extension.swift */,
+				C4D8A6222A940E2300B71F22 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,7 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C407A8902A93B79B00A5F7C6 /* CalculatorViewController.swift in Sources */,
+				C4D8A6212A940B1800B71F22 /* UItextField+Extension.swift in Sources */,
 				C407A88D2A93AF3400A5F7C6 /* HomeScreen.swift in Sources */,
+				C4D8A6232A940E2300B71F22 /* UIViewController+Extension.swift in Sources */,
 				C407A87A2A93A6BB00A5F7C6 /* HomeViewController.swift in Sources */,
 				C407A8762A93A6BB00A5F7C6 /* AppDelegate.swift in Sources */,
 				C407A89A2A93E05200A5F7C6 /* ResultScreen.swift in Sources */,

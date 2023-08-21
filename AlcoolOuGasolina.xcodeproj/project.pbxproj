@@ -15,6 +15,7 @@
 		C407A88D2A93AF3400A5F7C6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A88C2A93AF3400A5F7C6 /* HomeScreen.swift */; };
 		C407A8902A93B79B00A5F7C6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A88F2A93B79B00A5F7C6 /* CalculatorViewController.swift */; };
 		C407A8932A93B80000A5F7C6 /* CalculatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8922A93B80000A5F7C6 /* CalculatorScreen.swift */; };
+		C407A8962A93D63400A5F7C6 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8952A93D63400A5F7C6 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C407A88C2A93AF3400A5F7C6 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C407A88F2A93B79B00A5F7C6 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		C407A8922A93B80000A5F7C6 /* CalculatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorScreen.swift; sourceTree = "<group>"; };
+		C407A8952A93D63400A5F7C6 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		C407A8742A93A6BB00A5F7C6 /* AlcoolOuGasolina */ = {
 			isa = PBXGroup;
 			children = (
+				C407A8942A93D62A00A5F7C6 /* Alert */,
 				C407A88E2A93B78200A5F7C6 /* Calculator */,
 				C407A88A2A93AF1F00A5F7C6 /* Home */,
 				C407A8892A93AF0C00A5F7C6 /* Resource */,
@@ -111,6 +114,14 @@
 				C407A8922A93B80000A5F7C6 /* CalculatorScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A8942A93D62A00A5F7C6 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8952A93D63400A5F7C6 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				C407A8762A93A6BB00A5F7C6 /* AppDelegate.swift in Sources */,
 				C407A8782A93A6BB00A5F7C6 /* SceneDelegate.swift in Sources */,
 				C407A8932A93B80000A5F7C6 /* CalculatorScreen.swift in Sources */,
+				C407A8962A93D63400A5F7C6 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

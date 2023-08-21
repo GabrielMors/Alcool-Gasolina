@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: BaseViewController {
 
     var screen: CalculatorScreen?
     var alert: Alert?
@@ -19,7 +19,6 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         screen?.setDelegate(delegate: self)
         alert = Alert(controller: self)
     }
